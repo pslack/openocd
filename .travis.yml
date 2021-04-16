@@ -37,7 +37,7 @@ script:
   - $mingw64 ${CC} --version
   - $mingw64 env
   - $mingw64 ./bootstrap
-  - $mingw64 ./configure
+  - $mingw64 ./configure --disable-werror
   - $mingw64 make
 
 before_install:
