@@ -27,7 +27,7 @@ if RELEASE
 %C%_libopenocd_la_CPPFLAGS += -DGITVERSION=\"\"
 else
 %C%_libopenocd_la_CPPFLAGS += -DRELSTR=\"`$(top_srcdir)/guess-rev.sh $(top_srcdir)`\"
-%C%_libopenocd_la_CPPFLAGS += -DGITVERSION=\"`cd $(top_srcdir) && git describe`\"
+%C%_libopenocd_la_CPPFLAGS += -DGITVERSION=\"`git rev-parse --short HEAD`\"
 %C%_libopenocd_la_CPPFLAGS += -DPKGBLDDATE=\"`date +%F-%R`\"
 endif
 
